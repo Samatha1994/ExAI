@@ -1,0 +1,7 @@
+{
+    "train_directory": "C:/Users/Dell-PC/OneDrive - Kansas State University/Desktop/DataSemantics prep/adkdata/training",
+    "validation_directory": "C:/Users/Dell-PC/OneDrive - Kansas State University/Desktop/DataSemantics prep/adkdata/validation",
+    "batch_size": 32,
+    "image_size": [224, 224],
+    "epochs": 30
+}
