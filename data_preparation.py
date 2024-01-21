@@ -31,6 +31,15 @@ def create_data_generators(config):
         class_mode='categorical'
     )
 
+    test_dataset = image_generator.flow_from_directory(
+        batch_size=config["batch_size"],
+        directory=config["train_directory"],
+        shuffle=False,
+        target_size=tuple(config["image_size"]),
+        subset="validation",
+        class_mode='categorical'
+    )
+
     validation_dataset = image_generator_validation.flow_from_directory(
         batch_size=config["batch_size"],
         directory=config["validation_directory"],
@@ -39,4 +48,4 @@ def create_data_generators(config):
         class_mode='categorical'
     )
 
-    return train_dataset, validation_dataset
+    return train_dataset, test_dataset, validation_dataset
