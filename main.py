@@ -23,4 +23,4 @@ if not os.path.exists(output_dir):
 model_save_path = os.path.join(output_dir, 'model_resnet50V2_10classes_retest2023June.h5')
 model.save(model_save_path)
 
-
+#abc
