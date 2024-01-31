@@ -14,7 +14,7 @@ train_dataset, test_dataset, validation_dataset = dp.create_data_generators(conf
 model = md.create_model(train_dataset.num_classes)
 # -----------------------------------------------------------------------------------------
 #UNCOMMENT later:  commenting below to avoid repeating to compile and train again
-history = tr.compile_and_train(model, train_dataset, validation_dataset, config['epochs'])
+# history = tr.compile_and_train(model, train_dataset, validation_dataset, config['epochs'])
 # ------------------------------------------------------------------------------------------
 # Directory where you want to save outputs
 output_dir = 'outputs'
@@ -28,7 +28,7 @@ if not os.path.exists(output_dir):
 model_save_path = os.path.join(output_dir, model_filename)
 # ---------------------------------------------------------------------------------------------
 #UNCOMMENT later: Reusing exiting .h5 file..commenting below to avoid repeating to save the .h5 file.
-model.save(model_save_path)
+# model.save(model_save_path)
 # -----------------------------------------------------------------------------------------------
 model, layer_outputs, layer_names, feature_map_model = md.load_and_analyze_model(model_save_path)
 
@@ -58,7 +58,7 @@ base_url = "http://www.daselab.org/ontologies/ADE20K/hcbdwsu#"
 cg.generate_config_files(positive_csv_path, negative_csv_path, template_config_path, output_dir, base_url)
 
 
-###############################################################################################
+#-------------------------------------------------------------------------------------------
 #pip install gdown
 # DOWNLOAD .owl file from google drive
 
@@ -69,10 +69,10 @@ filename = 'combined.owl'  # Set your desired filename here
 
 # Download the file
 #UNCOMMENT later:  
-file_path = dgdrive.download_file_from_google_drive(file_url, output_folder, filename)
-print(f"File downloaded to: {file_path}")
+# file_path = dgdrive.download_file_from_google_drive(file_url, output_folder, filename)
+# print(f"File downloaded to: {file_path}")
 
 
-#################################################################################################
+#------------------------------------------------------------------------------------------
 
 
