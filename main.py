@@ -69,8 +69,8 @@ filename = 'combined.owl'  # Set your desired filename here
 
 # Download the file
 #UNCOMMENT later:  
-# file_path = dgdrive.download_file_from_google_drive(file_url, output_folder, filename)
-# print(f"File downloaded to: {file_path}")
+file_path = dgdrive.download_file_from_google_drive(file_url, output_folder, filename)
+print(f"File downloaded to: {file_path}")
 
 
 #------------------------------------------------------------------------------------------
