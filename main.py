@@ -63,14 +63,14 @@ cg.generate_config_files(positive_csv_path, negative_csv_path, template_config_p
 # DOWNLOAD .owl file from google drive
 
 # URL of the shared Google Drive file and output folder
-file_url = 'https://drive.google.com/file/d/1JlaelTKQczDMsm6aAlQVSw8gQqDnybSD/view?usp=sharing'
-output_folder = 'outputs'
-filename = 'combined.owl'  # Set your desired filename here
+# file_url = 'https://drive.google.com/file/d/1JlaelTKQczDMsm6aAlQVSw8gQqDnybSD/view?usp=sharing'
+# output_folder = 'outputs'
+# filename = 'combined.owl'  # Set your desired filename here
 
 # Download the file
 #UNCOMMENT later:  
-file_path = dgdrive.download_file_from_google_drive(file_url, output_folder, filename)
-print(f"File downloaded to: {file_path}")
+# file_path = dgdrive.download_file_from_google_drive(file_url, output_folder, filename)
+# print(f"File downloaded to: {file_path}")
 
 
 #------------------------------------------------------------------------------------------
