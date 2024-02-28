@@ -55,8 +55,11 @@ template_config_path = './inputs/set6-initial_score_hybrid.config'
 base_url = "http://www.daselab.org/ontologies/ADE20K/hcbdwsu#"
 
 # Call the function to generate config files
-cg.generate_config_files(positive_csv_path, negative_csv_path, template_config_path, output_dir, base_url)
+###cg.generate_config_files(positive_csv_path, negative_csv_path, template_config_path, output_dir, base_url)
+# Generate config files and get the count of non-empty config files created
+non_empty_config_count = cg.generate_config_files(positive_csv_path, negative_csv_path, template_config_path, output_dir, base_url)
 
+print(f"Total non-empty config files created: {non_empty_config_count}")
 
 #-------------------------------------------------------------------------------------------
 #pip install gdown
