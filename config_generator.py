@@ -52,7 +52,7 @@ def generate_config_files(positive_csv, negative_csv, template_config, output_di
         config_content += "lp.negativeExamples = {" + ",".join(negative_urls) + "}\n"
 
         if positive_urls or negative_urls:
-            config_filename = f"neuron_{col}_config.config"
+            config_filename = f"neuron_{col}.config"
             with open(os.path.join(output_dir, config_filename), 'w') as output_file:
                 output_file.write(config_content)
             non_empty_config_count += 1
